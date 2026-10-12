@@ -1,0 +1,70 @@
+1. Why SHAP Fails — Core Paper Links
+1. Huang & Marques-Silva (2024) — "On the failings of Shapley values for explainability"
+Link: https://dl.acm.org/doi/10.1016/J.IJAR.2023.109112
+One-line: Proves that existing SHAP score definitions necessarily yield misleading information, and empirical SHAP rankings barely match exact rankings .
+
+2. Hu et al. (2024) — "Manifold-based Shapley explanations for high dimensional correlated features"
+Link: https://www.sciencedirect.com/science/article/abs/pii/S0893608024005586
+One-line: SHAP's feature independence assumption causes erroneous explanations when features are correlated; proposes Latent SHAP computing values on the data manifold .
+
+3. Sundararajan & Najmi (ICML 2020) — "The Many Shapley Values for Model Explanation"
+Link: https://icml.cc/virtual/2020/poster/5812
+One-line: SHAP has multiple operationalizations producing different outputs, rendering the uniqueness theorem inapplicable; unused features can still receive attribution .
+
+4. Zhao et al. (2024) — "Error Analysis of Shapley Value-Based Model Explanations"
+Link: https://ar5iv.labs.arxiv.org/html/2404.13522
+One-line: Decomposes SHAP error into observation bias and structural bias; assumption-based SHAP easily becomes under-informative due to distribution drift .
+
+5. Aas, Jullum & Løland (2021) — "Explaining individual predictions when features are dependent"
+Link: https://ar5iv.labs.arxiv.org/html/1903.10464
+One-line: Kernel SHAP assumes feature independence; when features are dependent, it may give completely wrong answers .
+
+6. UbiQTree (2025) — "Uncertainty quantification in XAI with tree ensembles"
+Link: https://www.sciencedirect.com/science/article/pii/S2666389925003022
+One-line: Decomposes SHAP variance into aleatoric, epistemic, and entanglement components, providing computable uncertainty intervals for feature attributions .
+
+2. Baseline Models & Tools — Links
+1. Khorram & Kouchaki (2026) — LSTM-GAT for PhysioNet 2019
+Link: https://informatics.bmj.com/content/bmjhci/33/1/e101762
+One-line: AUROC 0.853 ± 0.005, 5 random seeds, LSTM as baseline, 28-feature preprocessing pipeline directly reproducible .
+
+2. TimeSHAP (PyPI)
+Link: https://pypi.org/project/timeshap/
+One-line: Model-agnostic recurrent explainer extending KernelSHAP to event-, timestamp-feature-, and cell-level attributions for RNN/LSTM models .
+
+3. TimeSHAP (GitHub)
+Link: https://github.com/feedzai/timeshap
+One-line: Source code for the KDD 2021 TimeSHAP algorithm, supports PyTorch and TensorFlow recurrent models with pruning for long sequences .
+
+4. Latent SHAP (GitHub)
+Link: https://github.com/Teriri1999/Latent-SHAP
+One-line: Implementation of manifold-based SHAP for high-dimensional correlated features .
+
+5. UbiQTree (GitHub)
+Link: https://github.com/dubeyakshat07/UBiQTree
+One-line: Code for epistemic uncertainty intervals on SHAP feature attributions for tree ensembles .
+
+6. PhysioNet Challenge 2019 (Official Data)
+Link: https://physionet.org/content/challenge-2019/1.0.0/
+One-line: 40,336 patients, 40 clinical variables, official sepsis prediction benchmark .
+
+7. SHAP Official Library
+Link: https://github.com/shap/shap
+One-line: TreeExplainer, KernelExplainer, DeepExplainer, GradientExplainer with visualization tools.
+
+8. MIMIC-IV (External Validation)
+Link: https://physionet.org/content/mimiciv/
+One-line: 76,307 patients, widely used for sepsis XAI external validation.
+
+3. Additional Helpful Resources
+1. PhysioNet 2019 Challenge Official Site
+Link: https://physionet.org/content/challenge-2019/1.0.0/
+Use: Primary dataset with official utility scoring function.
+
+2. MIMIC-III (Alternative Benchmark)
+Link: https://physionet.org/content/mimiciii/
+Use: Alternative ICU dataset for external validation .
+
+3. Captum (PyTorch Interpretability)
+Link: https://captum.ai/
+Use: Integrated Gradients, DeepLIFT, and other gradient-based attribution methods for LSTM models.
