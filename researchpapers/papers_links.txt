@@ -7,6 +7,8 @@ One-line: Proves that existing SHAP score definitions necessarily yield misleadi
 Link: https://www.sciencedirect.com/science/article/abs/pii/S0893608024005586
 One-line: SHAP's feature independence assumption causes erroneous explanations when features are correlated; proposes Latent SHAP computing values on the data manifold .
 
+https://journals.sagepub.com/doi/10.1177/20552076241272657 67% growth
+
 3. Sundararajan & Najmi (ICML 2020) — "The Many Shapley Values for Model Explanation"
 Link: https://icml.cc/virtual/2020/poster/5812
 One-line: SHAP has multiple operationalizations producing different outputs, rendering the uniqueness theorem inapplicable; unused features can still receive attribution .
